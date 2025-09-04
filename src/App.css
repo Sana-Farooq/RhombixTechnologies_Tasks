@@ -105,6 +105,22 @@ form {
   color: #ff1a1a;
 }
 
+.footer {
+  background-color: black;   
+  color: #fff;               
+  text-align: center;         /* center text */
+  padding: 15px 0;            /* spacing */
+  position: fixed;            /* stick to bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.footer p {
+  margin: 0;
+}
 
 /* Small screen fix */
 @media (max-width: 480px) {

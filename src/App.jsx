@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Todolist from "./components/Todolist";
+import Footer from "./components/Footer";
 
 function App() {
   const [todolist, setTodolist] = useState(() => {
@@ -8,7 +9,7 @@ function App() {
     const savedTodos = localStorage.getItem("todolist");
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
-  
+
   const [error, setError] = useState(""); // ⚡ for error message
   useEffect(() => {
     // Save to localStorage whenever todolist changes
@@ -48,6 +49,7 @@ function App() {
     );
   });
   return (
+    <>
     <div className="container">
       <h1>My To-Do List</h1>
       <form onSubmit={saveList}>
@@ -64,7 +66,10 @@ function App() {
       {error && <p style={{ color: "red", marginTop: "5px" }}>{error}</p>}
       <ul className="displayList">{List}</ul>
     </div>
+      <Footer/>
+</>
   );
+  
 }
 
 export default App;
