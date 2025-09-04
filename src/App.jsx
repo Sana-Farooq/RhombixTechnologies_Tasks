@@ -8,6 +8,7 @@ function App() {
     const savedTodos = localStorage.getItem("todolist");
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
+  
   const [error, setError] = useState(""); // ⚡ for error message
   useEffect(() => {
     // Save to localStorage whenever todolist changes
